@@ -140,6 +140,7 @@ body {
             margin-bottom: 2rem;
             color: $color-primary;
             @include animated-transition(200ms);
+            @extend %transition;
         }
 
         .content__description {

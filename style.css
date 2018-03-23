@@ -33,7 +33,7 @@ body {
   justify-content: center;
   align-items: flex-start; }
 
-.main__header .header__menu a, .main__content .content__button {
+.main__header .header__menu a, .main__content .content__title, .main__content .content__button {
   transition: 300ms ease-in-out; }
 
 .main {
