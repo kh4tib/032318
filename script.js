@@ -9,6 +9,5 @@ button.addEventListener("click", () => {
     description.innerHTML = "Rose plants range in size from compact, miniature roses, to climbers that can reach seven meters in height."
     button.innerHTML = "Check more"
     image.style.background = "url(https://images.unsplash.com/photo-1465405092061-4db6005a2be0?ixlib=rb-0.3.5&s=5db2717daa6fd6f0b2d42a98c894cd8b&auto=format&fit=crop&w=2134&q=80) center center / cover no-repeat";
-    image.style.transition = "opacity 300ms ease-in-out";
 });
 
