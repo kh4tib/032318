@@ -1,0 +1,162 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none; }
+
+::selection {
+  background: #c87081;
+  color: #fff; }
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'IBM Plex Mono', monospace; }
+
+@keyframes animated-transition {
+  from {
+    bottom: 3rem;
+    opacity: 0; }
+  to {
+    bottom: 0;
+    opacity: 1; } }
+.main__header, .main__content, .main__content .content__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+
+.main__content .content__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; }
+
+.main__header .header__menu a, .main__content .content__button {
+  transition: 300ms ease-in-out; }
+
+.main {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 5rem 1fr;
+  grid-template-columns: repeat(2, 1fr); }
+  .main__header {
+    grid-area: 1 / 1 / 2 / 3;
+    background: #fff;
+    border-bottom: 2px solid #c87081;
+    z-index: 2;
+    position: relative;
+    opacity: 0;
+    animation: animated-transition 1s 0s ease-out forwards; }
+    .main__header .header__container {
+      width: 80%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+    .main__header .header__logo {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #c87081; }
+    .main__header .header__menu a {
+      font-size: 0.825rem;
+      text-transform: uppercase;
+      letter-spacing: .25rem;
+      color: #c87081;
+      margin-left: 2rem; }
+      .main__header .header__menu a:hover {
+        color: #983a4c;
+        font-weight: 700; }
+  .main__content {
+    grid-area: 2 / 2 / 3 / 3;
+    background: #fff; }
+    .main__content .content__container {
+      width: 80%;
+      height: 80%; }
+    .main__content .content__subtitle {
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: 1rem;
+      margin-bottom: 2rem;
+      color: #161616;
+      position: relative;
+      opacity: 0;
+      animation: animated-transition 1s 100ms ease-out forwards; }
+    .main__content .content__title {
+      font-size: 6rem;
+      font-weight: 700;
+      line-height: 6rem;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      color: #c87081;
+      position: relative;
+      opacity: 0;
+      animation: animated-transition 1s 200ms ease-out forwards; }
+    .main__content .content__description {
+      width: 60%;
+      font-size: 1rem;
+      line-height: 2rem;
+      margin-bottom: 2rem;
+      color: #161616;
+      position: relative;
+      opacity: 0;
+      animation: animated-transition 1s 300ms ease-out forwards; }
+    .main__content .content__button {
+      width: 14rem;
+      height: 3rem;
+      background: #c87081;
+      font-size: 0.825rem;
+      text-transform: uppercase;
+      letter-spacing: .25rem;
+      color: #fff;
+      position: relative;
+      opacity: 0;
+      animation: animated-transition 1s 400ms ease-out forwards;
+      cursor: pointer; }
+      .main__content .content__button:hover {
+        background: #983a4c; }
+  .main__image {
+    grid-area: 1 / 1 / 3 / 2;
+    background: url(https://images.unsplash.com/photo-1502809737437-1d85c70dd2ca?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=998bccff06362226c18586b810543a9b&auto=format&fit=crop&w=2158&q=80) center center/cover no-repeat;
+    position: relative;
+    opacity: 0;
+    animation: animated-transition 1s 200ms ease-out forwards; }
+
+@media screen and (max-width: 1024px) {
+  .main {
+    grid-template-rows: 5rem 1fr;
+    grid-template-columns: 1fr; }
+    .main__image {
+      grid-area: 2 / 1 / 3 / 2;
+      opacity: .25;
+      z-index: -1; }
+    .main__content {
+      grid-area: 2 / 1 / 3 / 2;
+      background: transparent; } }
+@media screen and (max-width: 768px) {
+  .main {
+    grid-template-rows: 5rem 1fr;
+    grid-template-columns: 1fr; }
+    .main__image {
+      grid-area: 2 / 1 / 3 / 2;
+      opacity: .25; }
+    .main__content {
+      grid-area: 2 / 1 / 3 / 2;
+      background: transparent;
+      margin-top: 2rem; }
+      .main__content .content__title {
+        font-size: 4rem;
+        line-height: 4rem; }
+      .main__content .content__description {
+        width: 90%; }
+
+  .main__header .header__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; } }
+
+/*# sourceMappingURL=style.css.map */
